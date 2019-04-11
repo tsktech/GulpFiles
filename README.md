@@ -1,10 +1,15 @@
-My collection of gulpFile
+**My collection of gulpFile**
+
 1- Gulp 4 Tutorial with Node JS, ImageMin, Browser Sync, SASS, SourceMaps, CleanCSS 
-PixemWeb: https://youtu.be/tTrPLQ6nOX8
-// https://www.pixemweb.com/blog/gulp-4-0-0-with-nodejs-imagemin-browsersync-sass-sourcemaps-cleancss-more/
+
+[PixemWeb: Tutorial](https://youtu.be/tTrPLQ6nOX8 "Youtube Video") 
+<a href="https://www.pixemweb.com/blog/gulp-4-0-0-with-nodejs-imagemin-browsersync-sass-sourcemaps-cleancss-more/" target="_blank"> Read the Blog</a>
+
+2- Glup 3 Tutorial by [bootstrapWP] (https://bootstrapwp.com/ "Develop a WP Theme with BootStrap") adapted to gulp 4 using example from Gulp 
+<a href="https://bootstrapwp.com/download-sass-starter-wordpress-theme/" target="_blank"> the Paid Tutorial </a>
 
 
-CRITICAL NOTES:
+**CRITICAL Plugin NOTES:**
 
 [CRITICAL](https://github.com/addyosmani/critical "Critical Github")
 
@@ -12,7 +17,7 @@ Are there any sample projects available using Critical?
 Why, yes!. [Take a look at this](https://github.com/addyosmani/critical-path-css-demo "Critical Path CSS") Gulp project which demonstrates using Critical to generate and inline critical-path CSS. It also includes a mini-tutorial that walks through how to use it in a simple webapp.
 
 
-GULP NOTES:
+**GULP Node NOTES:**
 If you’ve globally installed gulp before, you’ll want to remove the old version. To check your version, run:
 
 `> gulp -v`
