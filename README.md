@@ -4,6 +4,14 @@ PixemWeb: https://youtu.be/tTrPLQ6nOX8
 // https://www.pixemweb.com/blog/gulp-4-0-0-with-nodejs-imagemin-browsersync-sass-sourcemaps-cleancss-more/
 
 
+CRITICAL NOTES:
+
+[CRITICAL](https://github.com/addyosmani/critical "Critical Github")
+
+Are there any sample projects available using Critical?
+Why, yes!. [Take a look at this](https://github.com/addyosmani/critical-path-css-demo "Critical Path CSS") Gulp project which demonstrates using Critical to generate and inline critical-path CSS. It also includes a mini-tutorial that walks through how to use it in a simple webapp.
+
+
 GULP NOTES:
 If you’ve globally installed gulp before, you’ll want to remove the old version. To check your version, run:
 
