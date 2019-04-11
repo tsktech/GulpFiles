@@ -72,3 +72,79 @@ var zipSRC 			= [
 	'!.git*',
 	'zipFile'
 ];
+
+function css() {
+  return gulp.src([scss + 'style.scss'])
+  .pipe(sourcemaps.init({loadMaps: true}))
+  .pipe(sass({
+  	outputStyle: 'expanded'
+  }).on('error', sass.logError))
+  .pipe(autoprefixer('last 2 versions'))
+  .pipe(sourcemaps.write())
+  .pipe(lineec())
+  .pipe(gulp.dest(root));
+}
+
+function concatCSS () {
+	return gulp.src(cssSRC)
+	.pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
+	.pipe(concat('style.min.css'))
+	.pipe(cleanCSS())
+	.pipe(sourcemaps.write('./maps/'))
+	.pipe(lineec())
+	.pipe(gulp.dest(scss));
+}
+
+function javaScript() {
+	return gulp.src(jsSRC)
+	.pipe(concat(themeName + '.js'))
+	.pipe(uglify())
+	.pipe(lineec())
+	.pipe(gulp.dest(jsdist));
+}
+//   .pipe(concat('devwp.js'))
+
+function imgmin() {
+	return gulp.src(imgSRC)
+	.pipe(changed(imgDEST))
+	.pipe(imagemin([
+		imagemin.gifsicle({interlaced: true}),
+		imagemin.jpegtran({progressive: true}),
+		imagemin.optipng({optimizationLevel: 5})
+	]))
+	.pipe(gulp.dest(imgDEST));
+}
+
+function zippackage (){
+	return gulp.src(zipSRC, {base: "."})
+	.pipe(zip(themeName + '.zip'))
+  	.pipe(gulp.dest('./zipFiles/'));
+}
+
+function watch () {
+	browserSync.init({
+		open: 		'external',
+		proxy: 		'http://localhost:8888/wordpress',
+		port: 		'8090',
+		browser: 	'google chrome'
+	});
+	gulp.watch(styleWatchFiles, gulp.series([css, concatCSS]));
+	gulp.watch(jsSRC, javaScript);
+	gulp.watch(imgSRC, imgmin);
+	gulp.watch([phpWatchFiles, jsdist + themeName + '.js', scss + 'style.min.css']).on('change', browserSync.reload);
+
+}
+
+// browser: "google chrome"
+// browser: ["google chrome", "firefox"]
+
+exports.css = css;
+exports.concatCSS = concatCSS;
+exports.javaScript = javaScript;
+exports.watch = watch;
+exports.imgmin = imgmin;
+exports.zip = zippackage;
+
+var build = gulp.parallel(watch);
+gulp.task('default', build);
+// gulp.task('default', zippackage);
