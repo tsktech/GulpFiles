@@ -5,7 +5,8 @@ var themeName 		= 'tsktech-basic';
 var gulp 		 = require('gulp'),
 	plumber      = require('gulp-plumber'), // .pipe(plumber()) for geting the errors
 	autoprefixer = require('gulp-autoprefixer'),
-	browserSync = require('browser-sync').create(),
+	browserSync  = require('browser-sync').create(),
+	reload       = browserSync.reload,
 	jshint       = require('gulp-jshint'),
 	stylish      = require('jshint-stylish' ),
 	uglify       = require('gulp-uglify'),
@@ -24,7 +25,7 @@ critical = require('critical'),
 */
 
 browserSync 	= require('browser-sync').create(),
-	reload 			= browserSync.reload,
+	
 /*
 function errorLog(error) {
     console.error(error.message);
@@ -36,6 +37,13 @@ function errorLogs(error) {
 }﻿ 
 // .on('error', errorLogs)
 */
+
+/*
+	.pipe( jshint() )
+    .pipe( jshint.reporter( stylish ) )
+    .pipe( jshint.reporter( 'fail' ) );
+*/
+
 
 // Default error handler
 var onError = function( err ) {
