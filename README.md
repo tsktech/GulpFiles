@@ -7,6 +7,14 @@ PixemWeb: https://youtu.be/tTrPLQ6nOX8
 GULP NOTES:
 If you’ve globally installed gulp before, you’ll want to remove the old version. To check your version, run:
 
-```gulp -v```
+`> gulp -v`
 
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*7nkP1HJpMefx74a6yPZo4g.png)
+
+If you don’t see CLI Version 1.x (as shown above), remove your old installation by running:
+
+`npm rm --global gulp`
+Now, you can install the standalone CLI using:
+
+`npm install --global gulp-cli`
+Run gulp -v again. Everything should match the screenshot above.
