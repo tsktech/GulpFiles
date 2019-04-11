@@ -7,5 +7,5 @@ PixemWeb: https://youtu.be/tTrPLQ6nOX8
 GULP NOTES:
 If you’ve globally installed gulp before, you’ll want to remove the old version. To check your version, run:
 
-'''gulp -v'''
+```gulp -v```
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*7nkP1HJpMefx74a6yPZo4g.png)
