@@ -14,7 +14,9 @@ If you’ve globally installed gulp before, you’ll want to remove the old vers
 If you don’t see CLI Version 1.x (as shown above), remove your old installation by running:
 
 `npm rm --global gulp`
+
 Now, you can install the standalone CLI using:
 
 `npm install --global gulp-cli`
+
 Run gulp -v again. Everything should match the screenshot above.
