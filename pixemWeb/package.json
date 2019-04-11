@@ -1,0 +1,24 @@
+{
+  "name": "tsktech-gulp",
+  "version": "1.0.0",
+  "description": "Gulp 4 file for BootStrap 4",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsktech/GulpFiles.git"
+  },
+  "keywords": [
+    "gulp 4",
+    "bootstrap 4",
+    "wp"
+  ],
+  "author": "Srikanth Kamath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsktech/GulpFiles/issues"
+  },
+  "homepage": "https://github.com/tsktech/GulpFiles#readme"
+}
