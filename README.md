@@ -14,30 +14,29 @@
 * [StanleyWP](https://github.com/braginteractive/stanleywp/blob/master/gulpfile.js "StanleyWP Theme GulpFile")
 
 
-**CRITICAL Plugin NOTES:**
-
-[CRITICAL](https://github.com/addyosmani/critical "Critical Github")
+**CRITICAL Plugin NOTES:** [CRITICAL](https://github.com/addyosmani/critical "Critical Github")
 
 Are there any sample projects available using Critical?
 Why, yes!. [Take a look at this](https://github.com/addyosmani/critical-path-css-demo "Critical Path CSS") Gulp project which demonstrates using Critical to generate and inline critical-path CSS. It also includes a mini-tutorial that walks through how to use it in a simple webapp.
 
 
-**JSHint** is a program that flags suspicious usage in programs written in JavaScript [gulp-jshint](https://www.npmjs.com/package/gulp-jshint "How to use gulp-jshint")
+**JSHint Plugin NOTES** JSHint is a program that flags suspicious usage in programs written in JavaScript [gulp-jshint](https://www.npmjs.com/package/gulp-jshint "How to use gulp-jshint")
 
 [How to install JSHint and get it working with Sublime Text 3](https://www.youtube.com/channel/UCmRDMfauwbiYKkuIh3B0q3Q "JSHINT by Paul Cheney") also check the [GitHub Repo for plugin SublimeLinter-JShint](https://github.com/SublimeLinter/SublimeLinter-jshint "SublimeLinter-JSHint")
 
-[Tuts+ Code on gulp-jshint](https://youtu.be/tNEdq0eqAQE?t=584 "JSHint in Sublime & Gulp") the actual tut start at 10:00. 
+[Tuts+ Code on gulp-jshint](https://youtu.be/tNEdq0eqAQE?t=584 "JSHint in Sublime & Gulp") (the actual tut start at 10:00.)
 
     ```
     .pipe( jshint() )
 	.pipe( jshint.reporter( 'default' ) );
     or
     .pipe( jshint() )
-    .pipe( jshint.reporter( stylish ) )  // will require ***jshint-stylish***
-    .pipe( jshint.reporter( 'fail' ) );  // task to fail when a JSHint error happens?
+    .pipe( jshint.reporter( stylish ) )  // will require ***jshint-stylish*** // 
+    .pipe( jshint.reporter( 'fail' ) );  // task to fail when a JSHint error happens??? not clear what this does
     ```
 
-***btw its recommeneded to ESLint instead of JSHint*** [ESHINT](https://eslint.org/docs/rules/ "Rules in ESLint")
+***btw its recommeneded to ESLint instead of JSHint*** [ESLINT](https://eslint.org/docs/rules/ "Rules in ESLint")
+ <a href="https://justinchmura.com/2016/06/28/eslint-using-gulp/">Justin Chmura Blogs</a>
 
 ```
 const gulp = require('gulp');
@@ -67,3 +66,6 @@ Now, you can install the standalone CLI using:
 `npm install --global gulp-cli`
 
 Run gulp -v again. Everything should match the screenshot above.
+
+`sudo npm install npm-check-updates -g`
+npm-check-updates
